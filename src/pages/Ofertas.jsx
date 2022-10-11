@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import logo from '../logo.svg';
 import '../App.css';
 import Cep from '../components/cepRequire';
+import Context from '../context/Context';
+import Success from '../components/addresConfirm';
+import Error from '../components/notWork';
 
 function Ofertas() {
+  const { page, setPage } = useContext(Context);
+  const rightComponent = () => {
+    if (page === 'cep') return <Cep />;
+    if (page === 'error') return <Error />;
+    if (page === 'returns') return <Success />;
+    return setPage('cep');
+  };
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Cep />
+        {rightComponent()}
         <p>
           Edit
           {' '}
