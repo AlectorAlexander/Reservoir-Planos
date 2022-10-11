@@ -1,9 +1,9 @@
-# Projeto Tryunfutino
+# Projeto Reservoir Planos
 
 ## Contexto
 
 Projeto pessoal desenvolvido enquanto cadidato à Vaga de Desenvolvedor Front End Jr, na empresa OMNIX, onde desenvolvi uma aplicação em React que simula uma Landing Page de uma empresa fictícia que tem foco na venda de planos de internet.
-Ao acessar o site, o usuário se depara com um formulário requisitando seu cep para prosseguir. Ao avançar, é mostrado as as ofertas dispovíveis próximas a região do CEP informado, e um botão fixo no canto inferior direito da tela com a mensagem “Ops, errei meu cep!”, que, ao ser clicado, volta para a página anterior.
+Ao acessar o site, o usuário se depara com um formulário requisitando seu cep para prosseguir. Ao avançar, é mostrado as ofertas dispovíveis próximas a região do CEP informado, e um botão fixo no canto inferior direito da tela com a mensagem “Ops, errei meu cep!”, que, ao ser clicado, volta para a página anterior.
 
 ## Ferramentas
 
