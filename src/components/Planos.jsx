@@ -1,15 +1,30 @@
 /* eslint-disable react/jsx-filename-extension */
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Button, Card, ListGroup } from 'react-bootstrap';
+import Context from '../context/Context';
 import planos from '../planos';
 
 function Planos() {
+  const {
+    Data, setData,
+  } = useContext(Context);
+
+  useEffect(() => {
+    if (!Data) {
+      const data = JSON.parse(localStorage.getItem('user'));
+      setData(data);
+    }
+  }, []);
+
   return (
     <div className="Planos d-flex flex-wrap justify-content-center container-fluid">
-      {planos.map((el) => {
+      {Data && planos.map((el) => {
         const {
           plan_code: planCode, minutes, internet, price, plan_type: planType, operator,
         } = el;
+        const {
+          cep, logradouro, bairro, localidade, uf, ddd,
+        } = Data;
         return (
           <Card className="m-3" style={{ width: '18rem' }}>
             <Card.Body>
@@ -21,8 +36,7 @@ function Planos() {
                 <ListGroup.Item>{`${minutes} minutos`}</ListGroup.Item>
               </ListGroup>
               <Card.Text>
-                Some quick example text to build on the card title and make up the
-                bulk of the cards content.
+                {`Oferta localizada próxima ao bairro ${bairro}, ${logradouro}, com o cep ${cep}, em ${localidade}-${uf}, DDD ${ddd}.`}
               </Card.Text>
               <Button variant="primary">Go somewhere</Button>
             </Card.Body>

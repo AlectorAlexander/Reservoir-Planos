@@ -26,8 +26,8 @@ function Cep() {
       setPage('error');
     }
     if (data.cep) {
-      console.log(data);
       setData(data);
+      localStorage.setItem('user', JSON.stringify(data));
       setPage('returns');
     }
   };
