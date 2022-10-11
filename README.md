@@ -14,9 +14,6 @@ Ao acessar o site, o usuário se depara com um formulário requisitando seu cep 
 * Axios
 * IMask
 
-## Acesso a aplicação:
-Você pode acessa-la através do gitHub pages <a href="https://alectoralexander.github.io/Reservoir-Planos/">aqui.</a> ou pode instalar as dependências localmente, como mostrado a seguir.
-
 ## Instalando Dependências
 
 ``` bash
