@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import {
-  CDBFooter, CDBFooterLink, CDBBtn, CDBIcon, CDBBox,
+  CDBFooter, CDBBtn, CDBIcon, CDBBox,
 } from 'cdbreact';
 import Context from '../context/Context';
 
@@ -12,7 +12,7 @@ export default function Footer() {
     cep, logradouro, bairro, localidade, uf, ddd,
   } = Data;
   return (
-    <CDBFooter className="shadow fixed-bottom">
+    <CDBFooter className="shadow footer mt-auto py-3">
       <CDBBox display="flex" flex="column" className="mx-auto py-5" style={{ width: '90%' }}>
         <CDBBox display="flex" justifyContent="between" className="flex-wrap">
           <CDBBox>
@@ -20,19 +20,9 @@ export default function Footer() {
               <img alt="logo" src="https://logopond.com/logos/2714a5c6929637ee6b246f8d71a9893c.png" width="70px" />
               <span className="ml-3 h5 font-weight-bold">Reservoir Planos</span>
             </a>
-            <p className="my-3" style={{ width: '550px' }}>
+            <p className="my-3 w-auto text-break text-wrap" style={{ width: '550px' }}>
               {`Todas as ofertas localizas próximas ao bairro ${bairro}, ${logradouro}, com o cep ${cep}, em ${localidade}-${uf}, DDD ${ddd}.`}
             </p>
-          </CDBBox>
-          <CDBBox>
-            <p className="h5 mb-4" style={{ fontWeight: '600' }}>
-              Help
-            </p>
-            <CDBBox display="flex" flex="column" style={{ cursor: 'pointer', padding: '0' }}>
-              <CDBFooterLink href="/">Support</CDBFooterLink>
-              <CDBFooterLink href="/">Sign Up</CDBFooterLink>
-              <CDBFooterLink href="/">Sign In</CDBFooterLink>
-            </CDBBox>
           </CDBBox>
 
         </CDBBox>
@@ -41,9 +31,9 @@ export default function Footer() {
           justifyContent="center"
           alignItems="center"
           style={{ width: '100%' }}
-          className="mx-auto mt-4"
+          className="mx-auto"
         >
-          <small className="text-center" style={{ width: '50%' }}>
+          <small className="text-center m-4" style={{ width: '50%' }}>
             &copy; Resevoir Planos, 2022. All rights reserved.
           </small>
           <CDBBtn flat color="dark" className="p-2">
