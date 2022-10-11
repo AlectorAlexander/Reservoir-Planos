@@ -27,6 +27,13 @@ function Cep() {
     }
     if (data.cep) {
       setData(data);
+      /* Aqui, eu envio as mesmas informações pro Context Api,
+      e pro LocalStorage. Faço isso, ao invés de escolher só uma opção
+      para passar informações, porque acredito que a busca de
+      informações no Provider tem um processamento mais rápido do
+      que seria a busca no LocalStorage, no entanto o Provider não
+      guarda as informações após um refresh, então caso o usuário dê um
+      F5 na rota '/ofertas', os dados do LocalStorage serão usados */
       localStorage.setItem('user', JSON.stringify(data));
       setPage('returns');
     }

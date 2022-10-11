@@ -2,6 +2,7 @@ import React from 'react';
 import {
   CDBFooter, CDBBtn, CDBIcon, CDBBox,
 } from 'cdbreact';
+import miniLogo from '../Resevoir Planos/favicon_transparent_32x32.png';
 
 export default function Footer() {
   return (
@@ -15,7 +16,7 @@ export default function Footer() {
       >
         <CDBBox display="flex" alignItems="center">
           <a href="/" className="d-flex align-items-center p-0 text-dark">
-            <img alt="logo" src="https://logopond.com/logos/2714a5c6929637ee6b246f8d71a9893c.png" width="70px" />
+            <img alt="logo" src={miniLogo} width="70px" />
             <span className="ml-3 h5 font-weight-bold">Reservoir Planos</span>
           </a>
 

@@ -2,6 +2,10 @@
 import React, { useContext, useEffect } from 'react';
 import { Button, Card, ListGroup } from 'react-bootstrap';
 import Context from '../context/Context';
+/* Criei o objeto "planos" para simular o que seria uma API de planos de internet.
+Eu gostei muito de desenvolver esse projeto por ser simples, mas se
+houvesse mais tempo para a entrega, eu criaria uma API de planos no
+Back para deixar a aplicação mais completa e imersiva  */
 import planos from '../planos';
 
 function Planos() {
