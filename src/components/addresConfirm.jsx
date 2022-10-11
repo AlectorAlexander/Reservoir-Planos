@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
 import { Form, Button/* , Spinner  */ } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import Context from '../context/Context';
 
 function Success() {
   const { setPage, Data } = useContext(Context);
+  const history = useNavigate();
 
   const cepReturn = async () => {
     setPage('cep');
@@ -29,7 +31,7 @@ function Success() {
           className="m-2"
           variant="primary"
           type="submit"
-          onClick={cepReturn}
+          onClick={() => history('/ofertas')}
         >
           Sim
         </Button>
